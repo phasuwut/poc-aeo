@@ -330,7 +330,11 @@ export default function PageSpeedInsights() {
                 </div>
               </CardContent>
             </Card>
+          </>
+        ) : null}
 
+        {isShowWebEdit ? (
+          <>
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">Checklist</CardTitle>
@@ -339,41 +343,38 @@ export default function PageSpeedInsights() {
                 <ActionableItems />
               </CardContent>
             </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">แก้ไขหน้าเว็บตามนี้</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul>
+                  <li>
+                    1. ใส่ keyword : วัสดุก่อสร้าง,อุปกรณ์ก่อสร้าง, อุปกรณ์ช่าง
+                  </li>
+                  <li>2. ใส่ h1 : ขายวัสดุก่อสร้าง</li>
+                  <li>3. ใส่ meta description : ขายวัสดุก่อสร้าง</li>
+                </ul>
+                <div className="mt-4 text-right">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="bg-blue-600 hover:bg-blue-700 text-white"
+                    onClick={() => {
+                      setScores({
+                        performance: 99,
+                        accessibility: 99,
+                        bestPractices: 99,
+                        seo: 99,
+                      });
+                    }}
+                  >
+                    Rescore
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </>
-        ) : null}
-
-        {isShowWebEdit ? (
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-lg">แก้ไขหน้าเว็บตามนี้</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul>
-                <li>
-                  1. ใส่ keyword : วัสดุก่อสร้าง,อุปกรณ์ก่อสร้าง, อุปกรณ์ช่าง
-                </li>
-                <li>2. ใส่ h1 : ขายวัสดุก่อสร้าง</li>
-                <li>3. ใส่ meta description : ขายวัสดุก่อสร้าง</li>
-              </ul>
-              <div className="mt-4 text-right">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="bg-blue-600 hover:bg-blue-700 text-white"
-                  onClick={() => {
-                    setScores({
-                      performance: 99,
-                      accessibility: 99,
-                      bestPractices: 99,
-                      seo: 99,
-                    });
-                  }}
-                >
-                  Rescore
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
         ) : null}
 
         {/* Insights */}
