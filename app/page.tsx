@@ -419,7 +419,11 @@ export default function PageSpeedInsights() {
           </CardContent>
         </Card> */}
       </div>
-      <ActionableItems />
+      <Card>
+        <CardContent>
+          <ActionableItems />
+        </CardContent>
+      </Card>
     </div>
   );
 }
