@@ -15,6 +15,7 @@ import {
   CheckCircle,
   Info,
 } from "lucide-react";
+import { ActionableItems } from "./ActionableItems";
 
 export default function PageSpeedInsights() {
   const [url, setUrl] = useState("");
@@ -418,6 +419,7 @@ export default function PageSpeedInsights() {
           </CardContent>
         </Card> */}
       </div>
+      <ActionableItems />
     </div>
   );
 }
