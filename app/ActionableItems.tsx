@@ -21,7 +21,28 @@ export function ActionableItems() {
                     <Accordion type="multiple">
                       {c.children.map((c1, k) => (
                         <AccordionItem key={k} value={`item-${i}-${j}-${k}`}>
-                          <AccordionTrigger>{c1.message}</AccordionTrigger>
+                          <AccordionTrigger>
+                            <div className="w-full flex justify-between">
+                              {c1.message}
+                              {k % 2 === 1 ? (
+                                <span
+                                  style={{ color: "green", marginLeft: 8 }}
+                                  aria-label="check"
+                                  title="Odd"
+                                >
+                                  ✔️
+                                </span>
+                              ) : (
+                                <span
+                                  style={{ color: "red", marginLeft: 8 }}
+                                  aria-label="cross"
+                                  title="Even"
+                                >
+                                  ❌
+                                </span>
+                              )}
+                            </div>
+                          </AccordionTrigger>
                           <AccordionContent>
                             <pre>{c1.example}</pre>
                           </AccordionContent>
