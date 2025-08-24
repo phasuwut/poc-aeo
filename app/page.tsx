@@ -330,6 +330,15 @@ export default function PageSpeedInsights() {
                 </div>
               </CardContent>
             </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Checklist</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ActionableItems />
+              </CardContent>
+            </Card>
           </>
         ) : null}
 
@@ -419,11 +428,6 @@ export default function PageSpeedInsights() {
           </CardContent>
         </Card> */}
       </div>
-      <Card>
-        <CardContent>
-          <ActionableItems />
-        </CardContent>
-      </Card>
     </div>
   );
 }
